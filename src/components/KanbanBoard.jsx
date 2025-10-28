@@ -2,6 +2,7 @@ import React from 'react'
 import { DragDropContext } from '@hello-pangea/dnd'
 import KanbanColumn from './KanbanColumn'
 import { updateTicket } from '../services/api'
+import logo from "../assets/logo.png";
 
 const KanbanBoard = ({ tickets, onTicketUpdate, onEditTicket, onDeleteTicket, onAddTicket, loading }) => {
   const columns = {
@@ -63,7 +64,7 @@ const KanbanBoard = ({ tickets, onTicketUpdate, onEditTicket, onDeleteTicket, on
         <div className="text-center">
           <div className="w-12 h-12 mx-auto mb-4">
             <img
-              src="/logo.png"
+              src={logo}
               alt="Loading"
               className="w-full h-full object-contain animate-pulse"
             />

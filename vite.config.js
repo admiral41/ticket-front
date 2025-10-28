@@ -8,13 +8,4 @@ export default defineConfig({
     tailwindcss(),
     react()
   ],
-  server: {
-    port: 3000,
-    proxy: {
-      '/api': {
-        target: process.env.VITE_API_URL || 'https://ticket-backend-c2xa.onrender.com',
-        changeOrigin: true
-      }
-    }
-  }
 })
