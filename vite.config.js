@@ -12,7 +12,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: process.env.VITE_API_URL || 'https://ticket-backend-c2xa.onrender.com',
         changeOrigin: true
       }
     }
